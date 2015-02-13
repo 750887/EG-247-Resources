@@ -32,24 +32,53 @@ ezplot(ans,[-1,1]),grid
 % The basic signal operations work as you'd expect
 A = 2; T = 2;
 v1 = A*heaviside(t - T);
-ezplot(v1,[-1, 4]),grid
+ezplot(v1,[-4, 4]),grid
 %% Part 1
 % To validate Figure 1.8 in the textbook Karris (page 1-4) use the |heaviside|
 % and |ezplot| functions to plot each of the following:
 %
-% # $-Au_0(t)$ 
+% # $-Au_0(t)$ #
+%%
+v1 = -A*heaviside(t);
+ezplot(v1,[-4, 4]),grid
 % # $-Au_0(t-T)$ 
+%%
+v1 = -A*heaviside(t - T);
+ezplot(v1,[-4, 4]),grid
 % # $-Au_0(t+T)$ 
+%%
+v1 = -A*heaviside(t + T);
+ezplot(v1,[-4, 4]),grid
 % # $Au_0(-t)$
+%%
+v1 = A*heaviside(-t);
+ezplot(v1,[-4, 4]),grid
 % # $Au_0(-t+T)$
+%%
+v1 = A*heaviside(-t + T);
+ezplot(v1,[-4, 4]),grid
 % # $Au_0(-t-T)$
+%%
+v1 = A*heaviside(-t - T);
+ezplot(v1,[-4, 4]),grid
 % # $-Au_0(-t)$ 
+%%
+v1 = -A*heaviside(-t);
+ezplot(v1,[-4, 4]),grid
 % # $-Au_0(-t+T)$ 
+%%
+v1 = -A*heaviside(-t + T);
+ezplot(v1,[-4, 4]),grid
 % # $-Au_0(-t-T)$
+%%
+v1 = -A*heaviside(-t - T);
+ezplot(v1,[-4, 4]),grid
 %% Part 2
 % Use the |heaviside| and |ezplot| functionshow that $u_0(t) - u_0(t - 1)$ 
 % represents the rectangular pulse shown in
 % Figure 1.9 of the textbook.
+v1 = heaviside(t)- heaviside (t-1);
+ezplot(v1,[-2, 2]),grid
 %% Part 3
 % Use the |heaviside| and |ezplot| functions to validate equations
 % 1.13, 1.14, 1.17 and 1.18.
